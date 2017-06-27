@@ -21,22 +21,22 @@ Neighborhood map project is developed for Front-End Nanodegree at Udacity.
     * define this scope ``` var ctrl = this; ```
     * define how array using observable 
     
-          ``` 
+          
           ctrl.markers = ko.observableArray([]);
           ctrl.allLocations = ko.observableArray([]);
-          ```.
+          .
           
     * call initmap before start if google map no display show alert to you to tell him
     * try to show the content about the places on time when click on marker or click on list view
     
-           ```
+           
           ctrl.clickHandler = function(data) {
           centerLocation(data, ctrl.map(), ctrl.markers); 
           // call centerLocation fumction and pass last value of map and markers that      with data send from click dom
           nfoWindow.setContent(data.marker.content);
           infoWindow.open(ctrl.map(), data.marker);
              };
-           ```.
+           .
            
     * define  fetchForsquare function which get location
     * loop on all places in model using **foreach**
@@ -44,23 +44,23 @@ Neighborhood map project is developed for Front-End Nanodegree at Udacity.
     * send http request using get method that return json
     * clickHandler on location list view
     
-           ``` 
+            
            function centerLocation(data, map, markers) { 
                      for (var i = 0; i < markers().length; i++) {
                          markers()[i].infowindow.close();
                      }
-           ```
+           
       
     * set lat and lng on map using location to focus on it
-       ```
-       map.setCenter(new google.maps.LatLng(data.location.lat,      data.location.lng));
-       map.setZoom(12);
-       for (i = 0; i < markers().length; i++) {
-              var content = markers()[i].content.split('<br>');
-              if (data.name === content[0]) {
-                    toggleBounce(markers()[i]);
-              }
-        } ```
+       
+          map.setCenter(new google.maps.LatLng(data.location.lat,      data.location.lng));
+          map.setZoom(12);
+          for (i = 0; i < markers().length; i++) {
+                 var content = markers()[i].content.split('<br>');
+                 if (data.name === content[0]) {
+                       toggleBounce(markers()[i]);
+                 }
+           } 
 
 [Demo](http://subratrout.github.io/neighborhood-map)
 
