@@ -9,6 +9,10 @@ Neighborhood map project is developed for Front-End Nanodegree at Udacity.
   * Search bar functionality.
   * List view of the identified locations.
   * Foursquare API is used to show related info. of the location.
+* to run the project:
+  - go to [my project](https://github.com/AyaatELdor/Neighborhood-Map)
+  - Download / Clone this project
+  - Run `index.html`
 * get start:
   * define global variable such as
        ```
